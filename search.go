@@ -19,7 +19,7 @@ type pwdb struct {
 }
 
 func Pwdb_open(fn string) (error, *pwdb) {
-	f, err := os.Open(os.Args[1])
+	f, err := os.Open(fn)
 	if err != nil {
 		return err, nil
 	}
